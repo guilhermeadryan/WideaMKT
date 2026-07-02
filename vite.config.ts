@@ -20,7 +20,7 @@ export default defineConfig({
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart({
-      server: { entry: "server" },
+      spa: { enabled: true },
     }),
     viteReact(),
   ],
