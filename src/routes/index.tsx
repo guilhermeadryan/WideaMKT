@@ -35,7 +35,7 @@ import {
 import { toast } from "sonner";
 import { track } from "@/lib/analytics";
 import { useTheme } from "@/hooks/use-theme";
-import wideaLogo from "@/assets/widea-logo.png.asset.json";
+const wideaLogo = { url: "/widea-logo.png" };
 
 export const Route = createFileRoute("/")({
   component: WideaLanding,

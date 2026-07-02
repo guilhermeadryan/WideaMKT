@@ -4,6 +4,7 @@ import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
+import { nitro } from "nitro/vite";
 
 export default defineConfig({
   resolve: {
@@ -19,9 +20,8 @@ export default defineConfig({
   plugins: [
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
-    tanstackStart({
-      spa: { enabled: true },
-    }),
+    tanstackStart(),
+    nitro({ preset: "vercel" }),
     viteReact(),
   ],
 });

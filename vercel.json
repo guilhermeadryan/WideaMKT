@@ -1,9 +1,5 @@
 {
-  "buildCommand": "bun run build && cp dist/client/_shell.html dist/client/index.html",
-  "installCommand": "bun install",
-  "outputDirectory": "dist/client",
-  "framework": null,
-  "rewrites": [
-    { "source": "/((?!assets/|favicon).*)", "destination": "/index.html" }
-  ]
+  "framework": "tanstack-start",
+  "buildCommand": "bun run build",
+  "installCommand": "bun install"
 }
